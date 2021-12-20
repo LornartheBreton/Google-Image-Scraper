@@ -1,5 +1,8 @@
-# Google Image Scraper
-A library to scrap google images
+# Kemitl
+Here you'll find all the project info.
+
+#  The Library: Google Image Scraper
+A library to scrap Google Images by [ohyicong] (https://github.com/ohyicong/Google-Image-Scraper). It's a wrapper around Selenium.
 
 ## Pre-requisites:
 1. Pip install Selenium Library
@@ -9,46 +12,12 @@ A library to scrap google images
 
 ## Setup:
 1. Open cmd
-2. Clone the repository (or [download](https://github.com/ohyicong/Google-Image-Scraper/archive/refs/heads/master.zip))
-    ```
-    git clone https://github.com/ohyicong/Google-Image-Scraper
-    ```
-3. Install Dependencies
+
+2. Install Dependencies
     ```
     pip install selenium, requests, pillow
     ```
-4. Run the code
+3. Run the code
     ```
     python main.py
     ```
-
-## Usage:
-```
-#Import libraries (Don't change)
-from GoogleImageScrapper import GoogleImageScraper
-import os
-
-#Define file path (Don't change)
-webdriver_path = os.path.normpath(os.getcwd()+"\\webdriver\\chromedriver.exe")
-image_path = os.path.normpath(os.getcwd()+"\\photos")
-
-#Add new search key into array ["cat","t-shirt","apple","orange","pear","fish"]
-search_keys= ["cat","t-shirt"]
-
-#Parameters
-number_of_images = 10
-headless = True
-min_resolution=(0,0)
-max_resolution=(1920,1080)
-
-#Main program
-for search_key in search_keys:
-    image_scrapper = GoogleImageScraper(webdriver_path,image_path,search_key,number_of_images,headless,min_resolution,max_resolution)
-    image_urls = image_scrapper.find_image_urls()
-    image_scrapper.save_images(image_urls)
-
-```
-## Youtube Video:
-[![IMAGE ALT TEXT](https://github.com/ohyicong/Google-Image-Scraper/blob/master/youtube_thumbnail.PNG)](https://youtu.be/QZn_ZxpsIw4 "Google Image Scraper")
-
-Do remember to like, share and subscribe!
